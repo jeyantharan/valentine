@@ -126,9 +126,9 @@ export default function HomePage() {
               <Image
                 src={valentineImage}
                 alt="Us"
-                width={340}
-                height={340}
+                fill
                 className="intro-image"
+                sizes="(max-width: 480px) 85vw, 300px"
                 priority
               />
             </div>

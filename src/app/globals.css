@@ -17,6 +17,7 @@ body {
   background: linear-gradient(160deg, #fce4ec 0%, #fad4e1 35%, #f8bbd9 70%, #f48fb1 100%);
   font-family: "Georgia", "Times New Roman", serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 .valentine-page {
@@ -26,6 +27,7 @@ body {
   justify-content: center;
   padding: 1.5rem 2rem;
   box-sizing: border-box;
+  overflow-y: auto;
 }
 .valentine-page.message-view-active {
   height: 100vh;
@@ -846,6 +848,85 @@ body {
   transform: translateY(-1px);
 }
 
+/* Responsive: envelope + intro on tablets and small phones */
+@media (max-width: 768px) {
+  .envelope-trending {
+    width: min(280px, 90vw);
+  }
+  .intro-screen {
+    padding: 1.5rem 1rem;
+  }
+  .intro-image-wrap {
+    width: min(300px, 80vw);
+    height: min(300px, 80vw);
+  }
+}
+
+@media (max-width: 480px) {
+  .valentine-page {
+    padding: 0.75rem 0.75rem;
+    align-items: flex-start;
+    padding-top: 1rem;
+  }
+  .page-heading {
+    font-size: 1.35rem;
+    margin-bottom: 0.35rem;
+  }
+  .page-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  .envelope-card {
+    padding: 1.25rem 0.75rem;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  .envelope-trending {
+    width: min(260px, 88vw);
+    height: auto;
+    aspect-ratio: 280 / 180;
+  }
+  .btn-open-envelope {
+    min-width: 180px;
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+  }
+  .intro-screen {
+    max-width: 100%;
+    padding: 1.25rem 0.75rem;
+    width: 100%;
+  }
+  .intro-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .intro-image-wrap {
+    width: min(260px, 85vw);
+    height: min(260px, 85vw);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  }
+  .intro-progress-wrap {
+    max-width: 90%;
+  }
+  .intro-hint {
+    font-size: 0.85rem;
+  }
+  .btn-open-now {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .valentine-page .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
 .form-valentine .form-control {
   border: 2px solid rgba(233, 30, 99, 0.25);
   border-radius: 14px;
@@ -924,6 +1005,7 @@ body {
   position: relative;
   width: 300px;
   height: 300px;
+  max-width: 100%;
   margin: 0 auto 1.25rem;
   border-radius: var(--valentine-radius-sm);
   overflow: hidden;
@@ -933,6 +1015,8 @@ body {
 .intro-image {
   object-fit: cover;
   border-radius: 14px;
+  width: 100%;
+  height: 100%;
 }
 
 .intro-progress-wrap {
