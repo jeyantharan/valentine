@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fce4ec"/>
+      <stop offset="100%" style="stop-color:#f8bbd9"/>
+    </linearGradient>
+    <linearGradient id="heart" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e91e63"/>
+      <stop offset="100%" style="stop-color:#c2185b"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <path fill="url(#heart)" d="M200 320c-8-8-80-72-120-140-28-48-20-100 20-132 44-36 100 4 100 80 0-76 56-116 100-80 40 32 48 84 20 132-40 68-112 132-120 140z"/>
+  <text x="200" y="380" text-anchor="middle" fill="#c2185b" font-family="Georgia" font-size="18">Your photo here</text>
+</svg>
